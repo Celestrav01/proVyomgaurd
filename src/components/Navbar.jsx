@@ -1,18 +1,53 @@
-import React from "react";
+import React from 'react';
 
-export default function Navbar() {
+const Navbar = () => {
   return (
-    <header className="sticky top-0 z-50 bg-gray-950/80 backdrop-blur-sm">
-      <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
-        <div className="text-blue-400 font-bold text-lg">VyomGarud — Project</div>
-        <nav className="hidden md:flex gap-6 text-gray-300">
-          <a href="#problem" className="hover:text-blue-400">Problem</a>
-          <a href="#approach" className="hover:text-blue-400">Approach</a>
-          <a href="#tech" className="hover:text-blue-400">Tech</a>
-          <a href="#impl" className="hover:text-blue-400">Implementation</a>
-          <a href="#contact" className="hover:text-blue-400">Contact</a>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-gray-900/95 backdrop-blur-sm border-b border-gray-800 shadow-xl">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        
+        <a href="#" className="text-2xl font-heading font-bold uppercase tracking-widest text-white">
+          VYOM<span className="text-vyom-orange">GARUD</span>
+        </a>
+        
+        <nav className="hidden md:flex space-x-4 font-poppins text-lg items-center">
+          
+          {/* Default state is text-gray-300, on hover it gets the background and dark text */}
+          <a 
+            href="#about" 
+            className="text-gray-300 transition duration-200 px-4 py-1.5 rounded-full hover:bg-vyom-orange hover:text-gray-900"
+          >
+            About
+          </a>
+          
+          <a 
+            href="#capabilities" 
+            className="text-gray-300 transition duration-200 px-4 py-1.5 rounded-full hover:bg-vyom-orange hover:text-gray-900"
+          >
+            Systems
+          </a>
+          
+          <a 
+            href="#highlights" 
+            className="text-gray-300 transition duration-200 px-4 py-1.5 rounded-full hover:bg-vyom-orange hover:text-gray-900"
+          >
+            Features
+          </a>
+          
+          {/* Contact Button (Solid Orange) */}
+          <a 
+            href="#contact" 
+            className="text-white bg-vyom-orange px-4 py-1.5 rounded-full hover:bg-orange-600 transition duration-200"
+          >
+            Contact
+          </a>
         </nav>
+        
+        <div className="md:hidden text-2xl text-vyom-orange">
+            ☰
+        </div>
       </div>
     </header>
   );
-}
+};
+
+export default Navbar;

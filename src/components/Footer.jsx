@@ -18,7 +18,7 @@ const Footer = () => {
             </p>
             {/* Contact for Guidance (Assignment Info) */}
             <p className="text-sm mt-4 text-gray-500">
-                For urgent inquiries: +91 8881444693
+                For urgent inquiries: +91 1010101011
             </p>
           </div>
           

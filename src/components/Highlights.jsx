@@ -1,9 +1,13 @@
 import React from 'react';
-// Using Font Awesome/icons library would replace the placeholder text
+
+// Updated HighlightItem component for better visual impact
 const HighlightItem = ({ icon, text }) => (
-  <li className="flex items-start space-x-4">
-    {/* Icon styled with the accent color */}
-    <span className="text-3xl text-vyom-orange flex-shrink-0 mt-1">{icon}</span>
+  // Added a subtle hover effect (bg change, border change)
+  <li className="flex items-center space-x-6 p-4 rounded-lg border-l-4 border-transparent 
+                 transition duration-300 hover:bg-gray-800 hover:border-vyom-orange/70">
+    
+    {/* Icon: Using a bold, fixed arrow (→) to replace generic icons */}
+    <span className="text-3xl text-vyom-orange flex-shrink-0 font-light">→</span>
     
     {/* Feature text */}
     <p className="text-xl md:text-2xl font-poppins text-gray-200">
@@ -14,7 +18,6 @@ const HighlightItem = ({ icon, text }) => (
 
 const Highlights = () => {
   return (
-    // Simple, focused section, using darker background for contrast
     <section id="highlights" className="py-16 md:py-24 bg-gray-900 text-white">
       <div className="max-w-4xl mx-auto px-6">
         
@@ -24,17 +27,14 @@ const Highlights = () => {
         </h2>
         
         {/* 3 concise feature bullets */}
-        <ul className="space-y-8">
+        <ul className="space-y-4">
           <HighlightItem 
-            icon="✅" 
             text="Uncompromised Military-Grade Reliability and Durability in Extreme Conditions."
           />
           <HighlightItem 
-            icon="⚙️" 
             text="Proprietary Precision Engineering for Sub-meter Navigation Accuracy."
           />
           <HighlightItem 
-            icon="🧠" 
             text="Next-Gen AI Autonomy for Complex Mission Execution and Decision Superiority."
           />
         </ul>
