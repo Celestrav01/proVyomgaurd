@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --accent: #ff7b00;
+  --charcoal: #111316;
+}
+
 body {
-  @apply bg-gray-900 text-white;
+  background: linear-gradient(180deg, var(--charcoal) 0%, #0d0f11 100%);
+  color: white;
 }

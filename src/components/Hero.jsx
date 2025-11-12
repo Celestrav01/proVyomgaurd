@@ -1,29 +1,42 @@
-import React from "react";
+import React from 'react';
 
-export default function Hero() {
+const Hero = () => {
   return (
-    <section className="flex flex-col items-center justify-center text-center py-20 px-6 bg-gradient-to-b from-gray-900 to-black">
-      <h1 className="text-5xl md:text-6xl font-extrabold leading-tight">
-        Empowering the Skies with <span className="text-blue-400">VyomGarud</span>
-      </h1>
-      <p className="mt-4 text-gray-400 max-w-2xl">
-        VyomGarud develops cutting-edge autonomous drones for defense and military applications.
-      </p>
+    // Updated: Added relative position for visual overlay/background
+    <section className="bg-gray-900 min-h-screen flex items-center justify-center text-white p-4 relative overflow-hidden">
+      
+      {/* BOLD VISUAL Placeholder
+        You should replace this div with a background image, video, or a stylized SVG graphic
+        of a modern, military-grade drone to fit the aesthetic.
+      */}
+      <div className="absolute inset-0 bg-cover bg-center opacity-10 pointer-events-none" 
+           style={{ backgroundImage: "url('/placeholder-drone-image.jpg')" }}>
+      </div>
+      
+      {/* Content wrapper with higher z-index to sit above the visual */}
+      <div className="max-w-7xl mx-auto text-center relative z-10"> 
+        {/* Company name 'VyomGarud' */}
+        <h1 className="text-6xl md:text-8xl font-extrabold tracking-tight font-heading uppercase mb-4 animate-fadeInDown">
+          VYOMGARUD
+        </h1>
+        
+        {/* Tagline */}
+        <p className="text-xl md:text-3xl font-light mb-10 text-gray-300 animate-fadeInUp delay-300">
+          Precision Engineering. Advanced Autonomy. <span className="text-[#ff7b00]">Military-Grade Reliability.</span>
+        </p>
 
-      <div className="mt-8 flex flex-col sm:flex-row gap-4">
-        <a
-          href="#contact"
-          className="bg-blue-500 text-black px-6 py-3 rounded-xl font-semibold hover:bg-blue-400 transition"
+        {/* CTA (Call to Action) */}
+        <a 
+          href="#contact" 
+          className="inline-block px-8 py-3 text-lg font-bold uppercase tracking-wider 
+                     bg-[#ff7b00] text-gray-900 rounded-lg shadow-2xl transition duration-300 
+                     hover:bg-orange-600 transform hover:scale-105"
         >
-          Get in Touch
-        </a>
-        <a
-          href="#about"
-          className="border border-blue-400 px-6 py-3 rounded-xl font-semibold hover:bg-blue-400/10 transition"
-        >
-          Learn More
+          Explore Our Systems
         </a>
       </div>
     </section>
   );
-}
+};
+
+export default Hero;

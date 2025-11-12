@@ -2,13 +2,17 @@ import React from "react";
 
 export default function Navbar() {
   return (
-    <nav className="flex justify-between items-center px-6 py-4 bg-gray-950 sticky top-0 z-50 shadow-md">
-      <h1 className="text-2xl font-bold text-blue-400">VyomGarud</h1>
-      <ul className="hidden md:flex space-x-6 text-gray-300">
-        <li><a href="#about" className="hover:text-blue-400">About</a></li>
-        <li><a href="#capabilities" className="hover:text-blue-400">Capabilities</a></li>
-        <li><a href="#contact" className="hover:text-blue-400">Contact</a></li>
-      </ul>
-    </nav>
+    <header className="sticky top-0 z-50 bg-gray-950/80 backdrop-blur-sm">
+      <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
+        <div className="text-blue-400 font-bold text-lg">VyomGarud — Project</div>
+        <nav className="hidden md:flex gap-6 text-gray-300">
+          <a href="#problem" className="hover:text-blue-400">Problem</a>
+          <a href="#approach" className="hover:text-blue-400">Approach</a>
+          <a href="#tech" className="hover:text-blue-400">Tech</a>
+          <a href="#impl" className="hover:text-blue-400">Implementation</a>
+          <a href="#contact" className="hover:text-blue-400">Contact</a>
+        </nav>
+      </div>
+    </header>
   );
 }
