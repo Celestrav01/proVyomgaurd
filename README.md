@@ -1,16 +1,52 @@
-# React + Vite
+# VyomGarud Landing Page: Internship Assessment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Submission for Web Developer Intern Role
 
-Currently, two official plugins are available:
+Thanks for taking the time to look at this project. I built this responsive landing page for the fictional UAV company, VyomGarud. My primary focus was hitting the core requirements while conveying a precise, high-end, military-grade feeling.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Design and Aesthetic Notes
 
-## React Compiler
+The look is built around **high contrast** and a **minimalist, dark theme**, which I felt best communicates reliability and advanced technology.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **Color Palette:** I stuck strictly to the requested charcoal, white, and the accent orange (`#ff7b00`).
+* **Typography:** Used the geometric **Montserrat** for all headings and the clean **Inter** or **Poppins** for body text.
+* **Aesthetic Goal:** To make the site feel dynamic and not just static text, I ensured the navigation links transform into solid orange buttons on hover—this gives the whole header a consistent, interactive feel. I also added subtle lift and shadow to the product cards in the **Capabilities** section.
 
-## Expanding the ESLint configuration
+## Implementation Details
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **Stack:** React (using Vite) and Tailwind CSS.
+* **Structure:** The page is broken down into the five required sections: Hero, About, Capabilities (3 cards), Highlights (3 bullets), and the Contact/Footer.
+* **Anchor Links:** I had to implement a small CSS fix using `scroll-padding-top` on the main container to prevent the fixed Navbar from covering the top of each section when a user clicks a navigation link.
+
+## How to Run the Project
+
+The setup is standard for a modern React project.
+
+1.  **Clone the repo:**
+    ```bash
+    git clone [YOUR_REPO_LINK]
+    cd vyomgarud-landing
+    ```
+2.  **Install everything:**
+    ```bash
+    npm install
+    ```
+3.  **Start the server:**
+    ```bash
+    npm run dev
+    ```
+    The site will be running locally at `http://localhost:5173`.
+
+##  Commit History Strategy
+
+I've kept the Git history progressive, documenting key steps as I moved from structure to styling:
+
+* `feat: Initial setup (React, Vite, Tailwind config).`
+* `feat: Complete Hero, About, and Footer components.`
+* `feat: Implement Capabilities and Highlights sections with initial content.`
+* `feat: Add functional, fixed Navbar.`
+* `fix: Resolve all CSS alignment issues (anchor links and button sizing).`
+* `style: Final polish on hover effects and button styles.`
+* `docs: Finalize README.`
+
+I appreciate the chance to work on this assignment.
