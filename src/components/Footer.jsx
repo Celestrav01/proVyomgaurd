@@ -2,29 +2,33 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    // Darkest background for the footer, with subtle top border
     <footer id="contact" className="bg-gray-950 text-white pt-16 pb-8 border-t border-gray-800">
-      <div className="max-w-7xl mx-auto px-6">
-        
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12 text-center sm:text-left">
           
-          {/* Company Info */}
-          <div className="col-span-1 md:col-span-2">
+          <div className="lg:col-span-2">
             <h3 className="text-3xl font-heading font-bold mb-4 text-vyom-orange">
               VYOMGARUD
             </h3>
-            <p className="text-gray-400 font-poppins">
+            <p className="text-gray-400 font-poppins text-base sm:text-lg">
               Engineered for absolute air superiority.
             </p>
-            {/* Contact for Guidance (Assignment Info) */}
-            <p className="text-sm mt-4 text-gray-500">
-                For urgent inquiries: +91 1010101011
+            <p className="text-sm mt-4 text-gray-400">
+              For urgent inquiries:{" "}
+              <a href="tel:+911010101011" className="hover:underline">
+                +91 1010101011
+              </a>
+            </p>
+            <p className="text-sm mt-2 text-gray-400">
+              Email us at{" "}
+              <a href="mailto:vyomgarud@com" className="hover:underline">
+                vyomgarud@example.com
+              </a>
             </p>
           </div>
-          
-          {/* Navigation Links (Simple Links) */}
+
           <div>
-            <h4 className="text-xl font-semibold mb-4 border-b border-vyom-orange/50 inline-block">
+            <h4 className="text-lg sm:text-xl font-semibold mb-4 border-b border-vyom-orange/50 inline-block">
               Navigation
             </h4>
             <ul className="space-y-2 text-gray-400">
@@ -33,10 +37,9 @@ const Footer = () => {
               <li><a href="#highlights" className="hover:text-vyom-orange transition">Reliability</a></li>
             </ul>
           </div>
-          
-          {/* Legal/Social Links */}
+
           <div>
-            <h4 className="text-xl font-semibold mb-4 border-b border-vyom-orange/50 inline-block">
+            <h4 className="text-lg sm:text-xl font-semibold mb-4 border-b border-vyom-orange/50 inline-block">
               Connect
             </h4>
             <ul className="space-y-2 text-gray-400">
@@ -45,12 +48,10 @@ const Footer = () => {
               <li><a href="#" className="hover:text-vyom-orange transition">Contact Sales</a></li>
             </ul>
           </div>
-
         </div>
-        
-        {/* Copyright */}
+
         <div className="text-center pt-8 border-t border-gray-800">
-          <p className="text-sm text-gray-500">
+          <p className="text-xs sm:text-sm text-gray-500">
             &copy; {new Date().getFullYear()} VyomGarud. All rights reserved.
           </p>
         </div>
